@@ -1,0 +1,1 @@
+java -jar /opt/product/demo-server/demo-$VERSION.jar --spring.config.location=/opt/product/demo-server/properties/application.properties

@@ -1,0 +1,14 @@
+mvn clean package
+docker images
+docker build -t springbootdemo:0.0.1 .
+docker run --name mydemo -d -p 8080 springbootdemo:0.0.1
+docker tag springbootdemo:0.0.1 quay.io/manojdhanorkar/springbootdemo:0.0.1
+docker login quay.io
+docker push quay.io/manojdhanorkar/springbootdemo:0.0.1
+
+
+quay.io/manojdhanorkar/springbootdemo:0.0.1
+
+docker tag springbootdemo:0.0.1 thingsboard123/springbootdemo:0.0.1
+docker push thingsboard123/springbootdemo:0.0.1
+

@@ -27,7 +27,7 @@ public class EmployeeController {
     @GetMapping(value = "/v1/employees", produces = "application/json")
     @ResponseStatus(value = HttpStatus.OK) // 200
     public List<Employee> getEmployees() {
-        log.debug("Request received.");
+        log.info("Request received.");
         return employeeService.getEmployees().stream().map(employeeMapper::toDto).collect(Collectors.toList());
     }
 

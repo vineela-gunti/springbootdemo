@@ -25,6 +25,8 @@ EXPOSE 8080
 COPY ./target/demo-$VERSION.jar $DEMOAPP_HOME
 COPY ./init_container.sh $DEMOAPP_HOME
 COPY ./src/main/resources/application.properties $DEMOAPP_HOME/properties
+COPY ./src/main/resources/application-dev.properties $DEMOAPP_HOME/properties
+COPY ./src/main/resources/application-prod.properties $DEMOAPP_HOME/properties
 
 #Default working directory
 WORKDIR $DEMOAPP_HOME

@@ -22,7 +22,7 @@ RUN mkdir -p $DEMOAPP_HOME/properties
 EXPOSE 8080
 
 #Add jars to  home directory
-COPY ./target/demo-$VERSION.jar $DEMOAPP_HOME
+COPY ./target/demo-0.0.1-SNAPSHOT.jar $DEMOAPP_HOME
 COPY ./init_container.sh $DEMOAPP_HOME
 COPY ./src/main/resources/application.properties $DEMOAPP_HOME/properties
 COPY ./src/main/resources/application-dev.properties $DEMOAPP_HOME/properties
